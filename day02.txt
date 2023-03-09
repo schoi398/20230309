@@ -53,12 +53,16 @@ stage
 stage에 올라와 있는 상황을 영구적으로 저장 : commit 
     커밋을 하게 되면 "stage에 올라와 있는 상태" 그대로 영구 저장된다
 
+-m 옵션 : 메세지를 간단히 작성할 수 있는 옵션
 git commit -m "커밋 메세지"
     커밋을 할 때 작성하고 싶은 메세지를 쌍따옴표 안쪽에 써준다
     이때. commit은 stage에 올라와 있는 상태가 영구적으로 저장된다 !!!!
 
 -a 옵션
+    git commit -a 
+        add는 자동으로 되고, 커밋 메세지 작성하는 에디터 열림
     git commit -am "커밋메세지"
+        add도 자동 커밋메세지도 간단히 작성
 
 git status 
     git 저장소의 상태를 확인해줘
@@ -84,3 +88,20 @@ git add 파일이름
 계정정보 확인하기
     git config user.name
     git config user.email
+
+git과 github 연결하기
+    1. github내 로컬 저장소와  연결할 원격 저장소 (repository) 만들기
+        우측 상단 프로필 클릭 > your repositories > New 클릭 > 레포지토리 이름 설정 > create repository 버튼
+
+    2. 로컬저장소와 원격저장소 연결
+        terminal에서
+            git remote add 원격저장소별칭 원격저장소주소
+
+    연결완료 (최초 한번만)
+
+평소에 깃 허브에 업로드하는 과정
+    수정 (unstage, tracked), 새롭게 만든 파일 (unstage, untracked)
+    add 하여 모든 수정사항 stage로 만들기
+    commit하여 stage에 올라간 상태를 영구저장
+    push 하여 commit된 상태를 github에 업로드하기
+    
