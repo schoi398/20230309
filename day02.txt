@@ -57,6 +57,9 @@ git commit -m "커밋 메세지"
     커밋을 할 때 작성하고 싶은 메세지를 쌍따옴표 안쪽에 써준다
     이때. commit은 stage에 올라와 있는 상태가 영구적으로 저장된다 !!!!
 
+-a 옵션
+    git commit -am "커밋메세지"
+
 git status 
     git 저장소의 상태를 확인해줘
 
@@ -66,3 +69,18 @@ git add 파일이름
     stage에 해당 내용들이 올라간다 (stage 상태가 된다)
 
     파일 이름 자리에 *을 사용하면 모든 요소들을 의미한다
+    git add *
+
+전역 (전체영역) git 사용자 계정 정보 입력하기
+    git config --global user.name "닉네임"
+        닉네임 설정
+    git config --global user.email "이메일"
+        이메일 설정
+
+작업 공간 내에 git 사용자 계정 정보 입력 (입력 안되어있으면 전역에 입력된 닉네임과 이메일 따라간다)
+    git config user.name "닉네임"
+    git config user.email "이메일"
+
+계정정보 확인하기
+    git config user.name
+    git config user.email
