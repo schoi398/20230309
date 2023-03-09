@@ -50,6 +50,13 @@ stage
     다른 상태가 된다 이를 인지하고 modified 상태가 되었다고 판단하며
     modified 된 상태는 tracked 상태지만 unstage 상태
 
+stage에 올라와 있는 상황을 영구적으로 저장 : commit 
+    커밋을 하게 되면 "stage에 올라와 있는 상태" 그대로 영구 저장된다
+
+git commit -m "커밋 메세지"
+    커밋을 할 때 작성하고 싶은 메세지를 쌍따옴표 안쪽에 써준다
+    이때. commit은 stage에 올라와 있는 상태가 영구적으로 저장된다 !!!!
+
 git status 
     git 저장소의 상태를 확인해줘
 
